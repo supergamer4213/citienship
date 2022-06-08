@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import cascada from "../public/Cascada.jpg"
-import captura from "../public/Capturadepantalla(342).png"
+import captura from "../public/Captura de pantalla (342).png"
 
 export default function Home() {
   
