@@ -7,7 +7,7 @@ import Head from 'next/head'
 import Share from "../utils/shares";
 import Link from "next/link";
 import { list } from "firebase/storage";
-import captura from "../public/Capturaplaya.png"
+import captura from "../public/Captura de pantalla (343).png"
 var books = []
 export default function all(props) {
     
