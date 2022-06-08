@@ -2,8 +2,10 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import cascada from "../public/Cascada.jpg"
+import captura from "../public/Capturatierra.png"
 
 export default function Home() {
+  
   return (
     <div>
         <Head>
@@ -12,7 +14,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
         <link href="https://fonts.googleapis.com/css2?family=Exo:wght@800&display=swap" rel="stylesheet"/>
       </Head>
-     <video playsInline autoPlay muted loop className={styles.video}>
+     <video playsInline autoPlay muted loop className={styles.video} poster={captura}>
        <source src="/Earth.mp4" type="video/mp4"/>
      </video>
      <ul className={styles.container}>
@@ -21,7 +23,7 @@ export default function Home() {
       </Link>
       <li><h4 className={styles.About}>About the website</h4></li>
       <Link href="/all">
-      <button><h4 className={styles.Share}>Share</h4></button>
+      <h4 className={styles.Share}>Share</h4>
       </Link>
      </ul>
      <h1 className={styles.text}>
