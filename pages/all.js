@@ -7,7 +7,7 @@ import Head from 'next/head'
 import Share from "../utils/shares";
 import Link from "next/link";
 import { list } from "firebase/storage";
-
+import captura from "../public/Capturaplaya.png"
 var books = []
 export default function all(props) {
     
@@ -19,7 +19,7 @@ export default function all(props) {
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
             <link href="https://fonts.googleapis.com/css2?family=Exo:wght@800&display=swap" rel="stylesheet"/>
             </Head>
-       <video playsInline autoPlay muted loop className={styles.video1}>
+       <video playsInline autoPlay muted loop className={styles.video1} poster={captura}>
        <source src="/video.mp4" type="video/mp4"/>
        </video>
          <ul className={styles.container}>
@@ -28,7 +28,7 @@ export default function all(props) {
         </Link>
         <li><h4 className={styles.About}>About the website</h4></li>
         <Link href="/all">
-        <button><h4 className={styles.Share}>Share</h4></button>
+        <h4 className={styles.Share}>Share</h4>
         </Link>
         </ul>
         <h1 className={styles.text1}>
@@ -62,6 +62,7 @@ export async function getStaticProps() {
     })
 
     return {
-      props : {books}
+      props : {books},
+      revalidate: 1,
     }
   }
