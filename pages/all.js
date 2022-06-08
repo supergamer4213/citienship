@@ -49,7 +49,7 @@ export default function all(props) {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     await getDocs(collection(db, "users")).then((snapshot) => {
         books = []
         snapshot.docs.forEach((doc) =>{
@@ -62,7 +62,6 @@ export async function getStaticProps() {
     })
 
     return {
-      props : {books},
-      revalidate: 1,
+      props : {books}
     }
   }
